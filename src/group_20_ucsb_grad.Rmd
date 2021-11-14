@@ -19,6 +19,8 @@ ucsb_grad <- read_csv(here("data", "ucsb_grad_data.csv"))
 ggplot(data = ucsb_grad, aes(x = year_abbr, y = domestic_enrollment, fill = ethnicity))+
   geom_col(position = "fill") + 
   labs(x = "Year",
-       y = "Percent of Domestic Enrollment")
+       y = "Percent of Domestic Enrollment",
+       title = "Domestic Graduate Enrollment by Ethnicity at UCSB")+
+  theme_minimal()
 ```
-
+**Figure 1. This graph shows the percentage of graduate domestic enrollment by ethnicity at UCSB from 2008-2019. A key finding is that White students make up over 50% of enrolment over these years.**
