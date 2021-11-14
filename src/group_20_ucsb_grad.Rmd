@@ -1,6 +1,6 @@
 ---
 title: "Group 20 UCSB domestic grad enrollment"
-author: "Hollie Pennington"
+author: "Hollie Pennington, Russell Fager"
 date: "11/14/2021"
 output: html_document
 ---
@@ -13,5 +13,10 @@ library(tidyverse)
 
 ```{r}
 ucsb_grad <- read_csv(here("data", "ucsb_grad_data.csv"))
+```
+
+```{r}
+ggplot(data = ucsb_grad, aes(x = year_abbr, y = domestic_enrollment, fill = ethnicity))+
+  geom_col() 
 ```
 
